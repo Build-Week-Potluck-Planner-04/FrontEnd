@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { Route, Link } from "react-router-dom"; //this is the needful for linking stuff. 
+//TODOS: IMPORT login, logout, private route
 
 function App() {
   return (
