@@ -8,7 +8,7 @@ class Login extends React.Component { //using a class comp because state is a bi
             username: '',
             password: '',
             role: '',
-            error: ''
+            error: 'PLEASE TRY AGAIN! USERNAME AND PASSWORD MUST MATCH THE REGISTER :-) '
         }
     };
 
