@@ -1,0 +1,1 @@
+//this is a component that will be rendered when authentication passes successfully!
