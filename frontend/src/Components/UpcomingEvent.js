@@ -52,33 +52,60 @@ const UpcomingEvent = (props) => {
     const [showText, setShowText] = useState(false);
 
 
-  const onClick = () => {
-      if (showText === false) {
-        return setShowText(true);
-    } else if (showText === true) {
-        return setShowText(false)
-    }
-}
+//   const onClick = () => {
+//       if (showText === false) {
+//         return setShowText(true);
+//     } else if (showText === true) {
+//         return setShowText(false)
+//     }
+// }
   const Text = () => 
-    <StyledDiv2>
-        <StyledPara>
-        Host Name: {props.person.name}<br/>
-        Date: {props.person.birth_year}<br/>
-        Time: {props.person.gender}<br/>
-        Location: {props.person.height}<br/>
-        Attending: <br/>
-        Food List: <br/>
-        </StyledPara>
-      </StyledDiv2>;
+    // <StyledDiv2>
+    //     <StyledPara>
+    //     Host Name: {props.person.name}<br/>
+    //     Date: {props.person.birth_year}<br/>
+    //     Time: {props.person.gender}<br/>
+    //     Location: {props.person.height}<br/>
+    //     Attending: <br/>
+    //     Food List: <br/>
+    //     </StyledPara>
+    //   </StyledDiv2>;
 
 
     console.log(props)
     return (
         <StyledDiv className='friend'>
-            <StyledH2>{props.person.name}</StyledH2>
-            <StyledButton onClick={onClick}>Event Info</StyledButton>
+            <StyledH2>Event Here:{props.person.name}</StyledH2>
+            <StyledDiv2>
+        <StyledPara>
+        Host Name: {props.person.name}<br/>
+        Date: {props.person.birth_year}<br/>
+        Time: {props.person.gender}<br/>
+        Location: {props.person.height}<br/>
+        <form>   
+            <label> 
+                    Attending: 
+                    <input 
+                        name = 'attending' 
+                        type = 'checkbox' 
+                    />
+                </label>
+                <label> 
+                    Food List 
+                    <input 
+                        checked = {props.person.food} 
+                        // onChange = {onChange} 
+                        name = 'foods' 
+                        type = 'checkbox' 
+                    />
+                </label>
+        </form>
+        </StyledPara>
+      </StyledDiv2>;
+
+            {/* <StyledButton onClick={onClick}>Event Info</StyledButton> */}
             <>
-            {showText ? <Text /> : null}
+            {/* {showText ? <Text /> : null} */}
             </>
         </StyledDiv>
   )
