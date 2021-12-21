@@ -1,5 +1,20 @@
-import React from "react"
-import styled from 'styled-components'
+import React, { useState, useEffect } from "react";
+import { Route, Switch, useHistory  } from 'react-router-dom';
+import CreateEventForm from './CreateEventForm';
+import axios from 'axios';
+import styled from 'styled-components';
+import * as yup from 'yup';
+import schema from './validation/schema';
+
+const StyledApp = styled.div`
+    text-align: center;
+    border: 1px solid rgb(210, 210, 210);
+    box-shadow: 0px 1px 6px -2px rgb(128, 127, 127);
+    border-radius: 8px;
+    margin: 16px;
+    padding: 16px 8px 12px 16px;
+    background-color: #2D82B7;  
+`
 
 const StyledDiv = styled.div`
     text-align: center;
@@ -11,115 +26,126 @@ const StyledDiv = styled.div`
     background-color: #f3f3f3;
     color: black;
     `
+    const StyledNav = styled.div`
+    text-align: center;
+    border: 1px solid rgb(210, 210, 210);
+    box-shadow: 0px 1px 6px -2px rgb(128, 127, 127);
+    border-radius: 8px;
+    margin: 16px;
+    padding: 16px 8px 12px 16px;
+    background-color: #f3f3f3;
+    color: black;
+    `
 
 
-const CreateEvent = (props) => {
-    const {
-         submit, change, errors, values, disabled
-    } = props
+const initialFormValues = { 
+  username: "",
+  event_name: "",
+  time: "",
+  date: "",
+  location: "",
+  guests: "",
+  food: "",
+} 
 
-    const onSubmit = event => {
-        event.preventDefault()
-        submit()
-    }
-    const onChange = evt => {
-        const { name, value, checked, type } = evt.target
-        const valueToUse = type === 'checkbox' ? checked : value;
-        change(name, valueToUse)
-      }
-    
-    return(
-        <StyledDiv>
-    <form onSubmit={onSubmit} id='event-form'> 
-    <div> 
-       <h2>Plan Your Own Event!</h2> 
-       
-            <h3>Event Information</h3> 
-   
-            <label> 
-              Host&nbsp;  
-               <input 
-                   value = {values.username} 
-                   onChange = {onChange} 
-                   name = 'username' 
-                   type = 'text'
-                   id = 'username-input' 
-              />
-              </label><br/>
-               <label> 
-              Event Name&nbsp;  
-               <input 
-                   value = {values.event_name} 
-                   onChange = {onChange} 
-                   name = 'event_name' 
-                   type = 'text'
-                   id = 'name-input' 
-              />                                      
-           </label><br/> 
-           <label> 
-              Date &nbsp;  
-               <input 
-                   id = 'special-text'
-                   value = {values.date} 
-                   onChange = {onChange} 
-                   name = 'date' 
-                   type = 'text' 
-               />                                    
-           </label> <br/> 
-             <label> 
-              Time &nbsp;  
-               <input 
-                   id = 'time-text'
-                   value = {values.time} 
-                   onChange = {onChange} 
-                   name = 'time' 
-                   type = 'text' 
-               />                                    
-           </label> <br/> 
-             <label> 
-              Location &nbsp;  
-               <input 
-                   id = 'location-text'
-                   value = {values.location} 
-                   onChange = {onChange} 
-                   name = 'location' 
-                   type = 'text' 
-               />                                    
-           </label> <br/> 
-             <label> 
-              Guests &nbsp;  
-               <input 
-                   id = 'guest-text'
-                   value = {values.guest} 
-                   onChange = {onChange} 
-                   name = 'guest' 
-                   type = 'text' 
-               />                                    
-           </label> <br/> 
-             <label> 
-              Food Items &nbsp;  
-               <input 
-                   id = 'food-text'
-                   value = {values.food} 
-                   onChange = {onChange} 
-                   name = 'food' 
-                   type = 'text' 
-               />                                    
-           </label> <br/> 
-                  
-       
-       <div> 
-      
-           <button id = 'event-button' disabled={disabled}>Confirm Event</button> 
-           <p>{errors.name}</p> 
-       
-           </div> 
-    </div> 
-    </form> 
-    </StyledDiv>
-    );
+const initialFormErrors = {
+  username: "",
+  event_name: "",
+  time: "",
+  date: "",
+  location: "",
+  guests: "",
+  food: "",
 }
 
-export default CreateEvent;
+const initialEvents= []
+const initialDisabled = true
 
-                       
+
+const CreateEvent = () => {
+
+
+  const [events, setEvent] = useState(initialEvents) 
+  const [formValues, setFormValues] = useState(initialFormValues) 
+  const [formErrors, setFormErrors] = useState(initialFormErrors) 
+  const [disabled, setDisabled] = useState(initialDisabled) 
+  const history = useHistory();
+
+
+  const postNewEvent = newEvent => { 
+    axios.post('https://reqres.in/api/users', newEvent) 
+    .then (response =>{ 
+      console.log(response)
+      setEvent([response.data, ...events]); 
+    }).catch(error => console.error(error)) 
+    .finally(() => setFormValues(initialFormValues)) 
+
+  } 
+  const validate = (name, value) => {
+    yup.reach(schema, name)
+      .validate(value)
+      .then(() => setFormErrors({ ...formErrors, [name]: '' }))
+      .catch(err => setFormErrors({ ...formErrors, [name]: err.errors[0] }))
+}
+
+  const inputChange = (name, value) => {           
+      validate(name, value);            
+      setFormValues({ ...formValues, [name] : value})
+      }
+
+    const formSubmit = () => {
+      const newEvents = {
+        username: formValues.username,
+        event_name: formValues.event_name,
+        time: formValues.time,
+        date: formValues.date,
+        location: formValues.location,
+        guests: formValues.guests,
+        food: formValues.food,
+      }
+      postNewEvent(newEvents)
+      setFormValues(initialFormValues)
+      history.push('/UpcomingEvents')
+    }
+
+ 
+    useEffect(() => {
+      schema.isValid(formValues).then(valid =>
+        setDisabled(!valid)
+      )
+    }, [formValues])
+  
+  return (
+
+
+    <Switch>        
+      {/* <Route exact path="/form">
+            {events.map(confirmation => {
+              return (
+                <Confirmation key={confirmation.id} details={confirmation} />
+              )
+            })}
+      </Route> */}
+
+      <Route path='/CreateEvent'>
+        <CreateEventForm
+          values = {formValues} 
+          change = {inputChange} 
+          submit = {formSubmit} 
+          disabled = {disabled} 
+          errors = {formErrors} 
+        /> 
+      </Route> 
+
+    {/* <StyledDiv>
+      <Route path="/">
+          <Home />
+      </Route>
+    </StyledDiv> */}
+
+    </Switch>   
+
+
+  );
+};
+export default CreateEvent;

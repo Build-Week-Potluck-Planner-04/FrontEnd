@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link, Route, } from 'react-router-dom';
-import CreateEvent from './components/CreateEvent';
+import { Link, Route, useHistory} from 'react-router-dom';
+import CreateEvent from './CreateEvent';
 import styled from 'styled-components';
 
 const StyledH2 = styled.h2`
@@ -17,17 +17,23 @@ border-radius: 15px;
 
 export default function Home() {
 
+    const history = useHistory();
+
+const routeToCreateEvent = () => {
+    history.push('/CreateEvent');
+  }
+
   return (
     <div>
-      <StyledH2>New Event Creator!</StyledH2>  
-        <StyledButton > 
-            <Link id="create-event" to="/CreateEvent">
-                Create New Event Here
-            </Link> 
-        </StyledButton>                       
+      <StyledH2>New Event Creator!</StyledH2> 
+ 
+        <StyledButton onClick={routeToCreateEvent} > 
+                Create New Event Here!
+        </StyledButton>     
+{/*                           
         <Route exact path="/CreateEvent" >
             <CreateEvent/>
-        </Route>              
+        </Route>               */}
     </div>     
   )
-}
+} 
