@@ -3,6 +3,10 @@ import './App.css';
 import { Route, Link } from "react-router-dom"; //this is the needful for linking stuff. 
 //TODOS: IMPORT login, logout, private route
 
+import Login from './components/Login';
+import Logout from './components/Logout';
+import PrivateRoute from './components/PrivateRoute';
+
 function App() {
   return (
     <div className="App">
@@ -18,10 +22,10 @@ function App() {
       <Link to = '/logout'>Log me OUT!</Link>
       <Link to = '/create-event'>Create an EVENT!</Link>
 
-      {/* <PrivateRoute exact path='/view' component={CreateEvent} />
+      <PrivateRoute exact path='/create-event' component={CreateEvent} />
         <Route exact path="/" component={Login} />
       <PrivateRoute exact path='/logout' component={Logout} />
-        <Route path='/login' component={Login} /> */}
+        <Route path='/login' component={Login} />
     </div>
   );
 }
