@@ -24,7 +24,9 @@ function App() {
       <Link to = '/create-event'>Create an EVENT!</Link>
 
       <PrivateRoute exact path='/create-event' component={CreateEvent} />
-        <Route exact path="/" component={Login} />
+
+        {/* <Route exact path="/" component={Home} /> */}
+
       <PrivateRoute exact path='/logout' component={Logout} />
         <Route path='/login' component={Login} />
     </div>
