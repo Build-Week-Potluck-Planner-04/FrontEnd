@@ -6,6 +6,7 @@ import { Route, Link } from "react-router-dom"; //this is the needful for linkin
 import Login from './components/Login';
 import Logout from './components/Logout';
 import PrivateRoute from './components/PrivateRoute';
+import CreateEvent from './components/CreateEvent';
 
 function App() {
   return (
