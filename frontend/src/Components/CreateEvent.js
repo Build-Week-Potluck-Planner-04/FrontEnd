@@ -4,7 +4,6 @@ import CreateEventForm from './CreateEventForm';
 import axios from 'axios';
 import styled from 'styled-components';
 
-
 const StyledApp = styled.div`
     text-align: center;
     border: 1px solid rgb(210, 210, 210);
@@ -48,7 +47,7 @@ const initialFormValues = {
 } 
 
 
-const initialEvents= []
+const initialEvents= [];
 
 
 
