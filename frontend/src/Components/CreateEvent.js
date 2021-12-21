@@ -105,17 +105,15 @@ const CreateEvent = () => {
                 <Confirmation key={confirmation.id} details={confirmation} />
               )
             })}
-      </Route> */}
-
-      <Route path='/CreateEvent'>
+          </Route> */}
+ 
         <CreateEventForm
           values = {formValues} 
           change = {inputChange} 
           submit = {formSubmit} 
           // disabled = {disabled} 
           // errors = {formErrors} 
-        /> 
-      </Route> 
+        />
 
     {/* <StyledDiv>
       <Route path="/">
@@ -124,7 +122,6 @@ const CreateEvent = () => {
     </StyledDiv> */}
 
     </Switch>   
-
 
   );
 };
