@@ -60,7 +60,7 @@ class Login extends React.Component { //using a class comp because state is a bi
           />
           <button id='submit'>Log in</button>
         </form>
-        {!token ? <p>{this.state.credentials.error}</p> : <h3>Login success!</h3>}
+        {!token ? <h3>{this.state.credentials.error}</h3> : <h3>Login success!</h3>}
             </div>
         )
     }
