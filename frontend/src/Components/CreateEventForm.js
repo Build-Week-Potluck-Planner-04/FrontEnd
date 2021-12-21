@@ -23,9 +23,9 @@ const CreateEventForm = (props) => {
         submit()
     }
     const onChange = evt => {
-        const { name, value, checked, type } = evt.target
+        const { name, value } = evt.target
         // const valueToUse = type === 'checkbox' ? checked : value;
-        change(name) //valueToUse
+        change(name, value) //valueToUse
       }
 
     return(
