@@ -1,25 +1,38 @@
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
 import './App.css';
+import axios from 'axios';
+import styled from 'styled-components';
+import { Route, Link, Router, Switch, useHistory } from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Potluck Planner
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+
+
+return(
+<>
+  	<header>
+    	<h1>Potluck Planner</h1>
+      	<nav>
+        	<Link>Home</Link>
+          <Link>Create Event</Link>
+          <Link>Upcoming Events</Link>
+          <Link>Login</Link>
+        </nav>
+    </header>
+  
+
+
+<Route path='/CreateEvent'>
+<Events/> 
+</Route> 
+
+
+<Route path="/">
+  <Home />
+</Route>
+
+</>
+
+	)
 }
 
 export default App;
