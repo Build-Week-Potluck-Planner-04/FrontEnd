@@ -1,25 +1,48 @@
-import logo from './logo.svg';
+
+import React from 'react';
 import './App.css';
+// import axios from 'axios';
+// import styled from 'styled-components';
+import { Route, Link, Switch} from 'react-router-dom';
+import CreateEvent from './Components/CreateEvent';
+import Home from './Components/Home';
+import UpcomingEvents from './Components/UpcomingEvents';
+import Login from './Components/Login';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Potluck Planner
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+const App = () => { 
+return (
+
+	<div>
+
+  	<header>
+    	<h1>Potluck Planner</h1>
+      	<nav>
+        	<Link to="/">Home</Link>
+          <Link to="/CreateEvent">Create Event</Link>
+          <Link to="/UpcomingEvents">Upcoming Events</Link>
+          <Link to="/Login">Login</Link>
+        </nav>
+    </header>
+
+    <Switch>
+        <Route path="/CreateEvent">
+          <CreateEvent />
+        </Route>
+
+        <Route path="/UpcomingEvents">
+          <UpcomingEvents />
+        </Route>
+
+        <Route path="/Login">
+          <Login />
+        </Route>
+
+        <Route path="/">
+          <Home />
+        </Route>
+
+    </Switch>
+  </div>
+	)
 }
-
-export default App;
