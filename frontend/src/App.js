@@ -1,6 +1,7 @@
 
 import React from 'react';
 import './App.css';
+
 // import axios from 'axios';
 // import styled from 'styled-components';
 import { Route, Link, Switch} from 'react-router-dom';
@@ -46,3 +47,5 @@ return (
   </div>
 	)
 }
+
+export default App;
