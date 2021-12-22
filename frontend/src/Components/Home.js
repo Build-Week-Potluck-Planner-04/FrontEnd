@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link, Route, useHistory} from 'react-router-dom';
+import CreateEvent from './CreateEvent';
 import styled from 'styled-components';
 
 const StyledH2 = styled.h2`
 font-size: 2rem;
 `
-
 
 const StyledButton = styled.button`
 color: black;
@@ -22,11 +22,11 @@ export default function Home() {
 const routeToCreateEvent = () => {
     history.push('/CreateEvent');
   }
-  
+
   return (
     <div>
       <StyledH2>New Event Creator!</StyledH2> 
- 
+
         <StyledButton onClick={routeToCreateEvent} > 
                 Create New Event Here!
         </StyledButton>     

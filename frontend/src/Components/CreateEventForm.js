@@ -11,11 +11,11 @@ const StyledDiv = styled.div`
     background-color: #f3f3f3;
     color: black;
     `
-  
+
 
 const CreateEventForm = (props) => {
     const {
-         submit, change, values, //disabled errors
+         submit, change, values, disabled, errors
     } = props
 
     const onSubmit = event => {
@@ -23,7 +23,7 @@ const CreateEventForm = (props) => {
         submit()
     }
     const onChange = evt => {
-        const { name, value, checked, type } = evt.target
+        const { name, value } = evt.target
         // const valueToUse = type === 'checkbox' ? checked : value;
         change(name, value) //valueToUse
       }
@@ -90,9 +90,9 @@ const CreateEventForm = (props) => {
               Guests &nbsp;  
                <input 
                    id = 'guest-text'
-                   value = {values.guest} 
+                   value = {values.guests} 
                    onChange = {onChange} 
-                   name = 'guest' 
+                   name = 'guests' 
                    type = 'text' 
                />                                    
            </label> <br/> 
@@ -110,8 +110,15 @@ const CreateEventForm = (props) => {
 
        <div> 
 
-           <button id = 'event-button'>Confirm Event</button> 
-           {/* <p>{errors.uname}</p>  */}
+           <button id = 'event-button' disabled={disabled}>Confirm Event</button> 
+           <p>{errors.username}</p> 
+                <p>{errors.event_name}</p>
+                <p>{errors.time}</p> 
+                <p>{errors.date}</p> 
+                <p>{errors.location}</p>  
+                <p>{errors.guests}</p>  
+                <p>{errors.food}</p>  
+
 
            </div> 
     </div> 
@@ -121,5 +128,3 @@ const CreateEventForm = (props) => {
 }
 
 export default CreateEventForm;
-
-                       

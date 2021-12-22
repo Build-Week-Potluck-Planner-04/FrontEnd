@@ -3,6 +3,8 @@ import { Route, Switch, useHistory  } from 'react-router-dom';
 import CreateEventForm from './CreateEventForm';
 import axios from 'axios';
 import styled from 'styled-components';
+import * as yup from 'yup';
+import schema from './validation/schema';
 
 const StyledApp = styled.div`
     text-align: center;
@@ -46,9 +48,18 @@ const initialFormValues = {
   food: "",
 } 
 
+const initialFormErrors = {
+  username: "",
+  event_name: "",
+  time: "",
+  date: "",
+  location: "",
+  guests: "",
+  food: "",
+}
 
-const initialEvents= [];
-
+const initialEvents= []
+const initialDisabled = true
 
 
 const CreateEvent = () => {
@@ -56,12 +67,13 @@ const CreateEvent = () => {
 
   const [events, setEvent] = useState(initialEvents) 
   const [formValues, setFormValues] = useState(initialFormValues) 
-  // const [formErrors, setFormErrors] = useState(initialFormErrors) 
+  const [formErrors, setFormErrors] = useState(initialFormErrors) 
+  const [disabled, setDisabled] = useState(initialDisabled) 
   const history = useHistory();
 
 
   const postNewEvent = newEvent => { 
-    axios.post('https://reqres.in/api/orders', newEvent) 
+    axios.post('https://reqres.in/api/users', newEvent) 
     .then (response =>{ 
       console.log(response)
       setEvent([response.data, ...events]); 
@@ -69,10 +81,15 @@ const CreateEvent = () => {
     .finally(() => setFormValues(initialFormValues)) 
 
   } 
-
+  const validate = (name, value) => {
+    yup.reach(schema, name)
+      .validate(value)
+      .then(() => setFormErrors({ ...formErrors, [name]: '' }))
+      .catch(err => setFormErrors({ ...formErrors, [name]: err.errors[0] }))
+}
 
   const inputChange = (name, value) => {           
-      // validate(name, value);            
+      validate(name, value);            
       setFormValues({ ...formValues, [name] : value})
       }
 
@@ -93,10 +110,13 @@ const CreateEvent = () => {
 
 
     useEffect(() => {
-    }, [])
+      schema.isValid(formValues).then(valid =>
+        setDisabled(!valid)
+      )
+    }, [formValues])
 
   return (
-  
+
 
     <Switch>        
       {/* <Route exact path="/form">
@@ -105,15 +125,17 @@ const CreateEvent = () => {
                 <Confirmation key={confirmation.id} details={confirmation} />
               )
             })}
-          </Route> */}
- 
+      </Route> */}
+
+      <Route path='/CreateEvent'>
         <CreateEventForm
           values = {formValues} 
           change = {inputChange} 
           submit = {formSubmit} 
-          // disabled = {disabled} 
-          // errors = {formErrors} 
-        />
+          disabled = {disabled} 
+          errors = {formErrors} 
+        /> 
+      </Route> 
 
     {/* <StyledDiv>
       <Route path="/">
@@ -122,8 +144,8 @@ const CreateEvent = () => {
     </StyledDiv> */}
 
     </Switch>   
-
   );
 };
-export default CreateEvent;
+
+export default CreateEvent
 
