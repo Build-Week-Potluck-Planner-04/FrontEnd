@@ -1,15 +1,57 @@
 import React from "react"
 import styled from 'styled-components'
 
+const FormContainer = styled.div`
+
+display: flex;
+flex-flow: column wrap;
+justify-content: center;
+align-content: center;
+align-items: center;
+
+div{
+  width: 100%;
+  text-align: center;
+}
+
+
+  `
+
 const StyledDiv = styled.div`
+ display: flex;
+border: 2px solid black;
+border-radius: 8px;
+justify-content:center;
+flex-wrap: wrap;
+padding-top: 1rem;
+max-width: 50%;
+background-color: white;
+background-color: rgba(43,48,58, .7);
+border: 2px solid white;
+align-content: center;
+
+form div{
+    width:100%;
     text-align: center;
-    border: 1px solid rgb(210, 210, 210);
-    box-shadow: 0px 1px 6px -2px rgb(128, 127, 127);
-    border-radius: 8px;
-    margin: 16px;
-    padding: 16px 8px 12px 16px;
-    background-color: #f3f3f3;
-    color: black;
+    justify-content: center;
+}
+
+form{
+    width: 30%;
+    margin-top;
+}
+
+
+& .formInputs{
+    display: flex;
+    flex-direction: column;
+    /* width */
+}
+
+label{
+    display: flex;
+    flex-direction: column;
+}
     `
 
 
@@ -29,10 +71,16 @@ const CreateEventForm = (props) => {
       }
 
     return(
+
+    <FormContainer>
+        <div>
+            <h2>Plan Your Own Event!</h2> 
+        </div>
         <StyledDiv>
+        
     <form onSubmit={onSubmit} id='event-form'> 
-    <div> 
-       <h2>Plan Your Own Event!</h2> 
+    <div className='formInputs'> 
+       
 
             <h3>Event Information</h3> 
 
@@ -124,6 +172,7 @@ const CreateEventForm = (props) => {
     </div> 
     </form> 
     </StyledDiv>
+    </FormContainer>
     );
 }
 

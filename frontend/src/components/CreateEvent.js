@@ -60,9 +60,7 @@ const initialFormErrors = {
 const initialEvents= [];
 const initialDisabled = true;
 
-
 const CreateEvent = () => {
-
 
   const [events, setEvent] = useState(initialEvents) 
   const [formValues, setFormValues] = useState(initialFormValues) 
@@ -107,7 +105,6 @@ const CreateEvent = () => {
       history.push('/UpcomingEvents')
     }
 
-
     useEffect(() => {
       schema.isValid(formValues).then(valid =>
         setDisabled(!valid)
@@ -115,7 +112,6 @@ const CreateEvent = () => {
     }, [formValues])
 
   return (
-
 
     <Switch>        
       {/* <Route exact path="/form">

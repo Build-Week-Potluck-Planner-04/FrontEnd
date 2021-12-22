@@ -11,6 +11,11 @@ justify-content: space-between;
 flex-wrap: wrap;
 padding: 1rem;
 width; 100%;
+background-color: white;
+margin: 5%;
+background-color: rgba(43,48,58, .7);
+border: 2px solid white;
+
 `
 const StyledDiv2 = styled.div`
 display: flex;
@@ -19,29 +24,33 @@ justify-content: center;
 flex-wrap: wrap;
 width: 100%;
 background-image: url('');
-color: black;
-border: 2px solid black;
+color: white;
 margin-top: 2%;
+text-shadow: 1px 1px 2px black, 0 0 50px black, 0 0 5px black;
+
 `
 const StyledH2 = styled.h2`
 display:flex;
-width: 50%;
-text-align: left;
-align-content: center;
+width: 100%;
+text-align: center;
+justify-content: center;
 Font-family: fantasy;
 letter-spacing: .5rem;
-color: black;
+color: white;
+font-family: 'Quicksand', sans-serif;
+text-shadow: 1px 1px 2px black, 0 0 25px darkblue, 0 0 5px black;
 `
 
 const StyledButton = styled.button`
 background-image: url('');
 border: 2px solid black;
 border-radius: 8px;
-color: black;
+color: white;
 height: 5rem;
 font-family: fantasy;
 background-size: cover;
 `
+
 const StyledPara = styled.div`
 font-weight: bold;
 `
@@ -57,6 +66,7 @@ const UpcomingEvent = (props) => {
 //         return setShowText(false)
 //     }
 // }
+
   const Text = () => 
     // <StyledDiv2>
     //     <StyledPara>
@@ -99,12 +109,13 @@ const UpcomingEvent = (props) => {
                 </label>
         </form>
         </StyledPara>
-      </StyledDiv2>;
+      </StyledDiv2>
 
             {/* <StyledButton onClick={onClick}>Event Info</StyledButton> */}
             <>
             {/* {showText ? <Text /> : null} */}
             </>
+
         </StyledDiv>
   )
 }
