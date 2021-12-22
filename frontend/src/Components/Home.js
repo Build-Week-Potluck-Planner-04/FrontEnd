@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, Route, useHistory} from 'react-router-dom';
-import CreateEvent from './CreateEvent';
+import CreateEvent from './createEvent';
 import styled from 'styled-components';
 
 const StyledH2 = styled.h2`
