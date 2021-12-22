@@ -1,11 +1,13 @@
 
 import React from 'react';
 import './App.css';
-import { Route, Link } from "react-router-dom"; //this is the needful for linking stuff. 
-import Login from './components/Login';
-import Logout from './components/Logout';
-import PrivateRoute from './components/PrivateRoute';
-import CreateEvent from './components/CreateEvent';
+import { Route, Link, Switch } from "react-router-dom"; //this is the needful for linking stuff. 
+import Login from './Components/Login';
+import Logout from './Components/Logout';
+import PrivateRoute from './Components/PrivateRoute';
+import CreateEvent from './Components/CreateEvent';
+import Home from './Components/Home'
+import UpcomingEvents from './Components/UpcomingEvents'
 
 const App = () => { 
 return (
@@ -18,8 +20,8 @@ return (
         	<Link to="/">Home</Link>
           <Link to="/CreateEvent">Create Event</Link>
           <Link to="/UpcomingEvents">Upcoming Events</Link>
-          <Link to = '/login'>Log me IN!</Link>
-          <Link to = '/logout'>Log me OUT!</Link>
+          <Link to = '/login'>Login</Link>
+          <Link to = '/logout'>Logout</Link>
         </nav>
     </header>
 

@@ -42,7 +42,7 @@ height: 5rem;
 font-family: fantasy;
 background-size: cover;
 `
-const StyledPara = styled.p`
+const StyledPara = styled.div`
 font-weight: bold;
 `
 
