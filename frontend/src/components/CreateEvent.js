@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Route, Switch, useHistory  } from 'react-router-dom';
-import CreateEventForm from './CreateEventForm';
+import CreateEventForm from './createEventForm';
 import axios from 'axios';
 import styled from 'styled-components';
 import * as yup from 'yup';

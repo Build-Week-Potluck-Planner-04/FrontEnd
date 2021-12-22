@@ -2,12 +2,12 @@
 import React from 'react';
 import './App.css';
 import { Route, Link, Switch } from "react-router-dom"; //this is the needful for linking stuff. 
-import Login from './Components/Login';
-import Logout from './Components/Logout';
-import PrivateRoute from './Components/PrivateRoute';
-import CreateEvent from './Components/CreateEvent';
-import Home from './Components/Home'
-import UpcomingEvents from './Components/UpcomingEvents'
+import Login from './components/login';
+import Logout from './components/logout';
+import PrivateRoute from './components/privateRoute';
+import CreateEvent from './components/createEvent';
+import Home from './components/home'
+import UpcomingEvents from './components/upcomingEvents'
 
 import styled from 'styled-components'
 
@@ -32,16 +32,9 @@ div{
 h1{
   font-size: 3rem;
   width: 100%;
-  /* font-family: 'Cantarell', sans-serif; */
   font-family: 'Codystar', cursive;
-   /* font-family: 'Courgette', cursive; */
-   /* font-family: 'Lato', sans-serif; */
-  /* font-family: 'Yellowtail', cursive; */
-/* font-family: 'Codystar', cursive;
-font-family: 'Courgette', cursive;
-font-family: 'Lato', sans-serif;
-font-family: 'Yellowtail', cursive; */
-text-shadow: 1px 1px 2px black, 0 0 25px #750D37, 0 0 5px #0f46bd;
+
+text-shadow: 1px 1px 3px black, 0 0 25px #750D37, 0 0 5px #0f46bd;
 }
 
 //1D84B5
@@ -73,8 +66,8 @@ return (
     	<div>
       	<nav>
         	<Link className='navLink' to="/">Home</Link>
-          <Link className='navLink' to="/CreateEvent">Create Event</Link>
-          <Link className='navLink' to="/UpcomingEvents">Upcoming Events</Link>
+          <Link className='navLink' to="/createEvent">Create Event</Link>
+          <Link className='navLink' to="/upcomingEvents">Upcoming Events</Link>
           <Link className='navLink' to = '/login'>Login</Link>
           <Link className='navLink' to = '/logout'>Logout</Link>
         </nav>
@@ -88,11 +81,11 @@ return (
         
        <Route path='/login' component={Login} />
         
-        <Route path="/CreateEvent">
+        <Route path="/createEvent">
           <CreateEvent />
         </Route>
 
-        <Route path="/UpcomingEvents">
+        <Route path="/upcomingEvents">
           <UpcomingEvents />
         </Route>
   
