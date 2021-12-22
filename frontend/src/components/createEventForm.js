@@ -8,14 +8,13 @@ flex-flow: column wrap;
 justify-content: center;
 align-content: center;
 align-items: center;
+font-family: 'Quicksand', sans-serif;
 
 div{
   width: 100%;
   text-align: center;
 }
-
-
-  `
+`
 
 const StyledDiv = styled.div`
  display: flex;
@@ -29,6 +28,7 @@ background-color: white;
 background-color: rgba(43,48,58, .7);
 border: 2px solid white;
 align-content: center;
+font-family: 'Quicksand', sans-serif;
 
 form div{
     width:100%;
@@ -53,6 +53,17 @@ label{
     flex-direction: column;
 }
     `
+    const StyledH2 = styled.h2`
+display:flex;
+width: 100%;
+text-align: center;
+justify-content: center;
+Font-family: fantasy;
+letter-spacing: .5rem;
+color: white;
+font-family: 'Quicksand', sans-serif;
+text-shadow: 1px 1px 2px black, 0 0 25px darkblue, 0 0 5px black;
+`
 
 
 const CreateEventForm = (props) => {
@@ -74,7 +85,7 @@ const CreateEventForm = (props) => {
 
     <FormContainer>
         <div>
-            <h2>Plan Your Own Event!</h2> 
+            <StyledH2 >Plan Your Own Event!</StyledH2 > 
         </div>
         <StyledDiv>
         
