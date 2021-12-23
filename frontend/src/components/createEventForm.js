@@ -10,6 +10,10 @@ align-content: center;
 align-items: center;
 font-family: 'Quicksand', sans-serif;
 
+& #event-button{
+    margin-top: 3%;
+}
+
 div{
   width: 100%;
   text-align: center;
@@ -37,7 +41,7 @@ form div{
 }
 
 form{
-    width: 30%;
+    width: 40%;
     margin-top;
 }
 
@@ -53,16 +57,16 @@ label{
     flex-direction: column;
 }
     `
-    const StyledH2 = styled.h2`
-display:flex;
-width: 100%;
-text-align: center;
-justify-content: center;
-Font-family: fantasy;
-letter-spacing: .5rem;
-color: white;
-font-family: 'Quicksand', sans-serif;
-text-shadow: 1px 1px 2px black, 0 0 25px darkblue, 0 0 5px black;
+const StyledH2 = styled.h2`
+    display:flex;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    letter-spacing: .3rem;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    text-shadow: 1px 1px 2px black, 0 0 25px darkblue, 0 0 5px black;
+    margin-top: 3%;
 `
 
 
@@ -92,8 +96,8 @@ const CreateEventForm = (props) => {
     <form onSubmit={onSubmit} id='event-form'> 
     <div className='formInputs'> 
        
-
-            <h3>Event Information</h3> 
+{/* 
+            <h3>Event Information</h3>  */}
 
             <label> 
               Host&nbsp;  

@@ -8,7 +8,8 @@ const StyledDiv = styled.div`
 margin: 0% 30%;
 font-family: 'Quicksand', sans-serif;
 
-h1{
+h2{
+  letter-spacing: .5rem;
   margin-top: 7%;
   font-family: 'Quicksand', sans-serif;
   text-shadow: 1px 1px 2px black, 0 0 15px black, 0 0 5px black;
@@ -32,7 +33,7 @@ const Appp = () => {
 
   return (
     <StyledDiv className="App">
-      <h1 className="Header">Upcoming Events</h1>
+      <h2 className="Header">Upcoming Events</h2>
         {
        events.map((person, index ) => (
         <UpcomingEvent key ={index} person = {person}/> ))

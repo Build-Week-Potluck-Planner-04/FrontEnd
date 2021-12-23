@@ -15,7 +15,7 @@ const HeaderDiv = styled.div`
   display: flex;
   width: 100%;
   font-family: 'Quicksand', sans-serif;
-  text-shadow: 1px 1px 2px black, 0 0 100px black, 0 0 5px darkblue;
+  text-shadow: 1px 1px 1px black, 0 0 100px black, 0 0 5px black;
 
 header{
   display: flex;
@@ -44,6 +44,11 @@ text-shadow: 1px 1px 3px black, 0 0 25px #750D37, 0 0 5px #0f46bd;
     text-decoration: none; 
     color: white;
     font-size: 1.4rem;
+  }
+
+  & .navLink:hover{
+    border-bottom: 2px dotted red;
+    text-shadow: 0px 0px 7px black, 0 0 25px darkblue, 0 0 10px red;
   }
 
 `
