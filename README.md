@@ -1,12 +1,10 @@
-# 🍽 *Potluck Planner*: Bloom Tech Build Week, December 2022
+# 🍽 ***Potluck Planner*: Bloom Tech Build Week, December 2022**
 
-## FrontEnd
-
-## Pitch
+## *Pitch*
 If you have ever tried to organize a potluck through text messages, online to-do lists or spreadsheets, you'll understand why this app is essential.   In the world of social gatherings and potlucks the "Potluck Planner" is king. This is your place for all things pot luck.
 
 
-## MVP
+## *MVP*
 1. As an `organizer` I can create an upcoming `potluck` and invite my friends to attend
 
 2. As an `organizer` I can adjust `date`s, `time`s and `location`s of the potluck
@@ -21,7 +19,9 @@ If you have ever tried to organize a potluck through text messages, online to-do
 
 Deployed URL: [https://deployedPotLuckPlannerAPI.heroku.com](https://deployedPotLu)
 
-## Meet the Team
+## **Meet the Team**
+
+## FrontEnd
 
 ### Person One
 #### Front End React I Engineer
