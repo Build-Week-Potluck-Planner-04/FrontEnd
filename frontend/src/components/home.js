@@ -12,6 +12,11 @@ align-items: center;
 font-family: 'Quicksand', sans-serif;
 margin-top: 5%;
 
+button:hover{
+  border: 2px dotted red;
+  text-shadow: 0px 0px 7px black, 0 0 25px darkblue, 0 0 10px red;
+}
+
 div{
   width: 30%;
   text-align: center;
@@ -21,10 +26,10 @@ div{
 const StyledH2 = styled.h2`
 font-size: 2rem;
 font-family: 'Quicksand', sans-serif;
-text-shadow: 1px 1px 2px black, 0 0 25px darkblue, 0 0 5px black;s
+text-shadow: 1px 1px 1px black, 0 0 25px darkblue, 0 0 10px red;
 `
 const StyledDiv = styled.div`
-display: flex;
+/* display: flex;
 border: 2px solid black;
 border-radius: 8px;
 justify-content: space-between;
@@ -32,27 +37,34 @@ align-items: center;
 align-content: center;
 flex-flow: column wrap;
 padding: 1rem;
-width: 25%;
-background-color: white;
-margin: 5%;
+width: 25%; */
+
+/* margin: 5%;
 background-color: rgba(43,48,58, .7);
-border: 2px solid white;
-font-family: 'Quicksand', sans-serif;
+
+font-family: 'Quicksand', sans-serif; */
 
 
 `
 const StyledButton = styled.button`
-margin: 16px;
-padding: 16px 8px 12px 16px;
+display: flex;
+/* margin: 16px; */
+padding: 30% 3%;
 font-size: 1rem;
-border-radius: 15px;
-background-color: #750D37;
-background-image: url('');
-border: 2px solid black;
-border-radius: 8px;
-color: #0f46bd;
+border-radius: 50%;
+color: white;
 height: 5rem;
 font-family: 'Quicksand', sans-serif;
+border: 2px solid white;
+font-size: 3rem;
+background-color: rgba(43,48,58, .7);
+font-family: 'Codystar', cursive;
+/* text-align: center; */
+align-items: center;
+content-align: center;
+margin-top: 30%;
+text-shadow: 1px 1px 1px black, 0 0 25px #750D37, 0 0 5px black ; //#0f46bd
+
 `
 
 
@@ -67,10 +79,10 @@ const routeToCreateEvent = () => {
   return (
     <FormContainer>
     <StyledDiv>
-      <StyledH2>Plan Your Next Potluck!</StyledH2> 
+      {/* <StyledH2>Plan Your Next Potluck!</StyledH2>  */}
 
         <StyledButton onClick={routeToCreateEvent} > 
-                Create New Event Here!
+                Get Planning
         </StyledButton>     
 {/*                           
         <Route exact path="/CreateEvent" >
