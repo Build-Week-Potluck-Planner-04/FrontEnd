@@ -7,7 +7,7 @@ If you have ever tried to organize a potluck through text messages, online to-do
 ## *MVP*
 1. As an `organizer` I can create an upcoming `potluck` and invite my friends to attend
 
-2. As an `organizer` I can adjust `date`s, `time`s and `location`s of the potluck
+2. As an `organizer` I can adjust the  `date`, `time` and `location` of the potluck
 
 3. As an `organizer` I can use the list feature in my app to add food `items` that we'd like to see at the potluck
 
