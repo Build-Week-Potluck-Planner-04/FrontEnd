@@ -1,4 +1,6 @@
-# FrontEnd
+# 🍽 *Potluck Planner*: Bloom Tech Build Week, December 2022
+
+## FrontEnd
 
 ## Pitch
 If you have ever tried to organize a potluck through text messages, online to-do lists or spreadsheets, you'll understand why this app is essential.   In the world of social gatherings and potlucks the "Potluck Planner" is king. This is your place for all things pot luck.
@@ -15,6 +17,10 @@ If you have ever tried to organize a potluck through text messages, online to-do
 
 5. As a `guest` I'd like to be able to select which `item`s I'd like to be responsible for bringing
 
+### *Heroku API*
+
+Deployed URL: [https://deployedPotLuckPlannerAPI.heroku.com](https://deployedPotLu)
+
 ## Meet the Team
 
 ### Person One
@@ -24,28 +30,28 @@ Github: https://github.com/personOne
 
 LinkedIn: https://linkedin.com/personOne
 
-### Person One. 
+### Person Two
 #### Front End React I Engineer
 
 Github: https://github.com/personOne
 
 LinkedIn: https://linkedin.com/personOne
 
-### Person One. 
+### Person Three 
 #### Front End React I Engineer
 
 Github: https://github.com/personOne
 
 LinkedIn: https://linkedin.com/personOne
 
-### Person One. 
+### Person Four 
 #### Front End React I Engineer
 
 Github: https://github.com/personOne
 
 LinkedIn: https://linkedin.com/personOne
 
-### Person One. 
+### Person Person Five 
 #### Front End React I Engineer
 
 Github: https://github.com/personOne
