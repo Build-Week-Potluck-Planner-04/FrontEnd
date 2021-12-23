@@ -15,3 +15,40 @@ If you have ever tried to organize a potluck through text messages, online to-do
 
 5. As a `guest` I'd like to be able to select which `item`s I'd like to be responsible for bringing
 
+## Meet the Team
+
+***Person One 
+Front End React I Engineer***
+
+Github: https://github.com/personOne
+
+LinkedIn: https://linkedin.com/personOne
+
+***Person Two 
+Front End React I Engineer***
+
+Github: https://github.com/personOne
+
+LinkedIn: https://linkedin.com/personOne
+
+***Person Three 
+Front End React I Engineer***
+
+Github: https://github.com/personOne
+
+LinkedIn: https://linkedin.com/personOne
+
+***Person Four 
+Front End React I Engineer***
+
+Github: https://github.com/personOne
+
+LinkedIn: https://linkedin.com/personOne
+
+***Person Five 
+Front End React I Engineer***
+
+Github: https://github.com/personOne
+
+LinkedIn: https://linkedin.com/personOne
+
