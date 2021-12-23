@@ -23,19 +23,20 @@ Deployed URL: [https://deployedPotLuckPlannerAPI.heroku.com](https://deployedPot
 
 ## Project Set Up
 
- 1. Clone your OWN version of the repository in your terminal. 
- 2.  CD into FrontEnd directory, followed by frontend directory.
- 3.  npm install
- 4.  npm start
+ 1. `git clone` your own version of the repository in your terminal. 
+ 2.  `cd FrontEnd` 
+ 3.  `cd frontend`
+ 4.  `npm install`
+ 5.  `npm start`
 
 ## **Meet the Team**
 
 ## FrontEnd
 
-### Person One
+### Hailey Magoline
 <!-- #### Front End React I Engineer -->
 
-Github: https://github.com/personOne
+Github: https://github.com/magoha01
 
 LinkedIn: https://linkedin.com/personOne
 
