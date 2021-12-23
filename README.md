@@ -17,35 +17,35 @@ If you have ever tried to organize a potluck through text messages, online to-do
 
 ## Meet the Team
 
-***Person One 
+***Person One. 
 Front End React I Engineer***
 
 Github: https://github.com/personOne
 
 LinkedIn: https://linkedin.com/personOne
 
-***Person Two 
+***Person Two. 
 Front End React I Engineer***
 
 Github: https://github.com/personOne
 
 LinkedIn: https://linkedin.com/personOne
 
-***Person Three 
+***Person Three. 
 Front End React I Engineer***
 
 Github: https://github.com/personOne
 
 LinkedIn: https://linkedin.com/personOne
 
-***Person Four 
+***Person Four. 
 Front End React I Engineer***
 
 Github: https://github.com/personOne
 
 LinkedIn: https://linkedin.com/personOne
 
-***Person Five 
+***Person Five. 
 Front End React I Engineer***
 
 Github: https://github.com/personOne
