@@ -38,35 +38,35 @@ Deployed URL: [https://deployedPotLuckPlannerAPI.heroku.com](https://deployedPot
 
 Github: https://github.com/magoha01
 
-LinkedIn: https://linkedin.com/personOne
+LinkedIn: https://www.linkedin.com/in/hailey-magoline/
 
-### Person Two
+### Danny Chui
 <!-- #### Front End React I Engineer -->
 
-Github: https://github.com/personOne
+Github: https://github.com/wreck888
 
-LinkedIn: https://linkedin.com/personOne
+LinkedIn: https://www.linkedin.com/in/danny-chui-73698b216/
 
-### Person Three 
+### Claire List
 <!-- #### Front End React I Engineer -->
 
-Github: https://github.com/personOne
+Github: https://github.com/clairelist
 
-LinkedIn: https://linkedin.com/personOne
+LinkedIn: https://www.linkedin.com/in/claire-list-052661221/
 
-### Person Four 
+### Benjamin Rusinowski
 <!-- #### Front End React I Engineer -->
 
-Github: https://github.com/personOne
+Github: https://github.com/Role4Initiative
 
-LinkedIn: https://linkedin.com/personOne
+LinkedIn: https://www.linkedin.com/in/benjamin-rusinowski-1477ba217/
 
 ## BackEnd
 
-### Person Five 
+### Mary Angelique Abacajan
 <!-- #### Front End React I Engineer -->
 
-Github: https://github.com/personOne
+Github: https://github.com/MaryAngelique
 
-LinkedIn: https://linkedin.com/personOne
+LinkedIn: https://www.linkedin.com/in/mary-angelique-abacajan-3636471b1/
 
