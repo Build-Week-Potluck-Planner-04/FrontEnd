@@ -15,9 +15,9 @@ If you have ever tried to organize a potluck through text messages, online to-do
 
 5. As a `guest` I'd like to be able to select which `item`s I'd like to be responsible for bringing
 
-### *Heroku API*
+<!-- ### *Heroku API*
 
-Deployed URL: [https://deployedPotLuckPlannerAPI.heroku.com](https://deployedPotLu)
+Deployed URL: [https://deployedPotLuckPlannerAPI.heroku.com](https://deployedPotLu) -->
 
 
 
