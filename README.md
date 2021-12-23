@@ -33,35 +33,37 @@ Deployed URL: [https://deployedPotLuckPlannerAPI.heroku.com](https://deployedPot
 ## FrontEnd
 
 ### Person One
-#### Front End React I Engineer
+<!-- #### Front End React I Engineer -->
 
 Github: https://github.com/personOne
 
 LinkedIn: https://linkedin.com/personOne
 
 ### Person Two
-#### Front End React I Engineer
+<!-- #### Front End React I Engineer -->
 
 Github: https://github.com/personOne
 
 LinkedIn: https://linkedin.com/personOne
 
 ### Person Three 
-#### Front End React I Engineer
+<!-- #### Front End React I Engineer -->
 
 Github: https://github.com/personOne
 
 LinkedIn: https://linkedin.com/personOne
 
 ### Person Four 
-#### Front End React I Engineer
+<!-- #### Front End React I Engineer -->
 
 Github: https://github.com/personOne
 
 LinkedIn: https://linkedin.com/personOne
 
-### Person Person Five 
-#### Front End React I Engineer
+## BackEnd
+
+### Person Five 
+<!-- #### Front End React I Engineer -->
 
 Github: https://github.com/personOne
 
