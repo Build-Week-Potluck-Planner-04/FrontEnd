@@ -70,7 +70,7 @@ const CreateEvent = () => {
 
 
   const postNewEvent = newEvent => { 
-    axios.post('https://reqres.in/api/users', newEvent) 
+    axios.post('https://bw-potluck-planner-04.herokuapp.com/potlucks', newEvent) 
     .then (response =>{ 
       console.log(response)
       setEvent([response.data, ...events]); 

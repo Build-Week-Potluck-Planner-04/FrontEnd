@@ -21,7 +21,7 @@ const Appp = () => {
   const [events, setEvents] = useState([])
 
   useEffect(() => {
-    axios.get('https://swapi.dev/api/people')
+    axios.get('https://bw-potluck-planner-04.herokuapp.com/potlucks')
       .then(res => {
         console.log(res.data.results);
         setEvents(res.data.results);
