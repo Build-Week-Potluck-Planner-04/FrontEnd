@@ -7,7 +7,7 @@ const axiosWithAuth = ()=> {
         headers: {
             authorization: token
         },
-        baseURL: "baseUrl" //GET FROM BACKEND FOLKS WHEN THEY ARE READY !
+        baseURL: "https://bw-potluck-planner-04.herokuapp.com/" //GET FROM BACKEND FOLKS WHEN THEY ARE READY !
     });
 }
 

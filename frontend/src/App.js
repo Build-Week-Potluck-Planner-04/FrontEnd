@@ -86,17 +86,14 @@ return (
         
        <Route path='/login' component={Login} />
         
-        <Route path="/createEvent">
-          <CreateEvent />
-        </Route>
+        <Route path="/createEvent"
+          component={CreateEvent} />
 
-        <Route path="/upcomingEvents">
-          <UpcomingEvents />
-        </Route>
+        <Route path="/upcomingEvents"
+        compnent={UpcomingEvents} />
   
-        <Route path="/">
-          <Home />
-        </Route>
+        <Route path="/"
+        component={Home} />
 
     </Switch>
   </AppDiv>

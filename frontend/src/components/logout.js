@@ -10,7 +10,7 @@ const Logout = () => {
             .post('/logout')
             .then(resp => {
                 localStorage.removeItem('token');
-                push('/');
+                push('/login');
             });
     }, []);  
     return(<div></div>);
